@@ -6,8 +6,17 @@
 # For multiples of 15, output   FizzBuzz
 # End at 32
 
+def FizzBuzz(x: int):
+  if x % 15 == 0:
+    return "FizzBuzz"
+  if x % 3 == 0:
+    return "Fizz"
+  if x % 5 == 0:
+    return "Buzz"
+  return x
+
 result = ""
-for myNumber in range(32):
-  result = str(result) + str(myNumber) + "\n"
+for myNumber in range(2, 33):
+  result = str(result) + str(FizzBuzz(myNumber)) + "\n"
 
 print(result)
